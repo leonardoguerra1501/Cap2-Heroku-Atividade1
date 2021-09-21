@@ -3,15 +3,38 @@
     src: url(../fonts/OpenDyslexic-Regular.otf);
     font-style: normal;
     font-size: normal;
-    }
+}
 
-*{
+body {
+    font-family: 'Archivo';
+}
+
+body.acess {
     font-family: 'Dislexia';
 }
 
+.navbar {
+    background-color: #0C3049;
+}
+
+.navbar-brand img {
+    width: 70%;
+}
+
+.nav-link {
+    color: #f5f5f5;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #c0c0c0;
+}
+
+#pesquisa {
+    background-color: #5DF04E;
+    color: #fff;
+}
 
 .container-data-profile {
-    position: relative;
     padding: 20px 0;
     border: 2px;
 }
@@ -115,12 +138,6 @@
     border-color: #0C3049;
 }
 
-#pesquisa {
-    background-color: #0C3049;
-    color: #f7f7f7;
-}
-
-
 .account-wall {
     border: 1.5px solid #000;
     box-sizing: border-box;
@@ -137,3 +154,35 @@
     margin: 30px 0;
 }
 
+.button-acess {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-options {
+    display: none;
+}
+
+.modal-options.active {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: inline-block;
+}
+
+.alter-font {
+    position: fixed;
+    top: 160px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 37px;
+    height: 37px;
+    background: url(../assets/type.svg) #5DF04E no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
