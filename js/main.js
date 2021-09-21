@@ -1,9 +1,13 @@
-let inputCEP = document.querySelector('#inputCEP')
-let inputLOGA = document.querySelector('#inputLOGA')
-let inputBAIRRO = document.querySelector('#inputBAIRRO')
-let inputESTADO = document.querySelector('#inputESTADO')
-let inputCIDADE = document.querySelector('#inputCIDADE')
+const inputCEP = document.querySelector('#inputCEP')
+const inputLOGA = document.querySelector('#inputLOGA')
+const inputBAIRRO = document.querySelector('#inputBAIRRO')
+const inputESTADO = document.querySelector('#inputESTADO')
+const inputCIDADE = document.querySelector('#inputCIDADE')
 const buttonProx = document.querySelector('.prosseguir')
+const buttonAcess = document.querySelector('.button-acess')
+const modalOptionsAcess = document.querySelector('.modal-options')
+const alterFonts = document.querySelector('.alter-font')
+
 
 const searchCEP = async(cep) => {
     if(inputCEP.value == false) {
@@ -24,3 +28,15 @@ const searchCEP = async(cep) => {
 }
 
 buttonProx.addEventListener('click', searchCEP)
+
+function ativaAcess() {
+    modalOptionsAcess.classList.toggle('active')
+}
+
+function alterFont() {
+    console.log('ok')
+    document.body.classList.toggle('acess')
+}
+
+buttonAcess.addEventListener('click', ativaAcess)
+alterFonts.addEventListener('click', alterFont)
